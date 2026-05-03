@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delícias da Daiana - (62) 9 8479-1201</title>
+
+  <meta property="og:title" content="Delícias da Daiana - (62) 9 8479-1201" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://coreilabs.github.io/daiana/deliciasdadaiana/" />
+<meta property="og:image" content="https://coreilabs.github.io/flobo/deliciasdadaiana/og.webp" />
+
+<!-- <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"> -->
+<!-- <liwebp -->
+<link rel="manifest" href="manifest.json">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Swiper CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+
+    .nav-link-custom {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link-custom:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+    body {
+      background: #ffffff;
+    }
+
+    /* Navbar */
+    .navbar-custom {
+      background-color: #888888;
+      
+    }
+
+    .navbar-custom .navbar-brand img {
+      height: 40px;
+    }
+
+    .navbar-custom .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    .navbar-custom .nav-link:hover {
+      opacity: 0.8;
+    }
+
+    /* Swiper */
+    .swiper {
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+      .swiper-slide img {
+        max-height: 400px;
+      }
+    }
+  </style>
+
+  <link rel="manifest" href="manifest.json">
+
+  
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+     Delícias da Daiana
+    </a>
+    <!-- TEXTO À DIREITA -->
+    <!-- <a href="https://api.whatsapp.com/send/?phone=5562993247666&text=Ol%C3%A1%2C+vim+pelo+site%21+Quero+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
+       class="ms-auto nav-link-custom">
+       LIGAR AGORA
+    </a> -->
+
+</nav>
+
+<br>
+
+
+
+
+
+<div class="container mt-4">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="logo1.webp" alt="Imagem 1"></div>
+      <div class="swiper-slide"><img src="logo2.webp" alt="Imagem 2"></div>
+      <div class="swiper-slide"><img src="logo3.webp" alt="Imagem 3"></div>
+      <div class="swiper-slide"><img src="logo4.webp" alt="Imagem 4"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Indicador de swipe -->
+<div class="text-center mb-3">
+  <img src="deslizar.jpg" 
+       alt="Deslize para os lados" 
+       class="img-fluid d-block mx-auto"
+       style="max-width: 120px;">
+</div>
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send/?phone=5562993247666&text=Ol%C3%A1%2C+vim+pelo+site%21+Quero+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+  z-index:1000;" target="_blank">
+<i style="margin-top:16px" class="fa fa-whatsapp"></i>
+</a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+function lazyLoadImages(selector = '.lazy-image', options = {}) {
+      const settings = {
+        threshold: 0.5,
+        ...options
+      };
+
+      const images = document.querySelectorAll(selector);
+
+      if (!('IntersectionObserver' in window)) {
+        // fallback simples
+        images.forEach(img => {
+          img.src = img.dataset.src;
+        });
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            observer.unobserve(img);
+          }
+        });
+      }, {
+        threshold: settings.threshold
+      });
+
+      images.forEach(img => observer.observe(img));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      lazyLoadImages('.lazy-image', { threshold: 0.7 });
+    });
+
+  
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    grabCursor: true,
+
+    breakpoints: {
+      576: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 3
+      }
+    }
+  });
+
+
+lazyLoadImages();
+
+
+</script>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J6WM4FD0SB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J6WM4FD0SB');
+</script>
+
+</body>
+</html>
